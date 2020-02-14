@@ -868,7 +868,7 @@ if (typeof window == void 0 && typeof exports == 'object') {
 
 getJasmineRequireObj().Order = function() {
   function Order(options) {
-    this.random = 'random' in options ? options.random : true;
+    this.random = 'random' in options ? options.random : false;
     var seed = (this.seed = options.seed || generateSeed());
     this.sort = this.random ? randomOrder : naturalOrder;
 
@@ -959,7 +959,7 @@ getJasmineRequireObj().Env = function(j$) {
        * @type Boolean
        * @default true
        */
-      random: true,
+      random: false,
       /**
        * Seed to use as the basis of randomization.
        * Null causes the seed to be determined randomly at the start of execution.
